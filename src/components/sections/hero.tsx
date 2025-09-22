@@ -27,7 +27,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center text-center">
+    <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center text-center lg:text-left">
       {heroImage && (
         <Image
           src={heroImage.imageUrl}
@@ -41,7 +41,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
       <div className="relative z-10 flex h-full items-center pt-20">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-white">
+          <div className="max-w-xl text-white">
             <div className={`transition-all duration-1000 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <h1 className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl">
                 Crafting Leaders.
@@ -51,8 +51,8 @@ export function Hero() {
               <p className="mt-6 text-md md:text-lg leading-8 text-gray-200 text-balance">
                 Transform your leadership through immersive experiences that blend ancient Indian wisdom with modern practices. Because leadership is not just a skill — it's a mindset.
               </p>
-              <div className="mt-8 h-10 text-accent font-semibold text-xl md:text-2xl flex justify-center items-center overflow-hidden">
-                <div className="relative h-full w-full">
+              <div className="mt-8 h-10 text-accent font-semibold text-xl md:text-2xl flex justify-center lg:justify-start items-center overflow-hidden">
+                <div className="relative h-full w-full max-w-sm">
                   {slidingTexts.map((text, index) => (
                     <span
                       key={index}
@@ -69,7 +69,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-            <div className={`mt-8 flex items-center justify-center gap-x-6 transition-all duration-1000 delay-300 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className={`mt-8 flex items-center justify-center lg:justify-start gap-x-6 transition-all duration-1000 delay-300 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Button asChild size="lg" variant="secondary" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <Link href="#programs">Explore Programs</Link>
               </Button>
