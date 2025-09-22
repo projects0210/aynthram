@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Hero background image of a leadership conference with an inspiring atmosphere.",
-      "imageUrl": "https://picsum.photos/seed/leadership-conference/1920/1080",
-      "imageHint": "leadership conference"
+      "description": "An engaging and professional leadership seminar in progress.",
+      "imageUrl": "https://picsum.photos/seed/leadership-seminar/1920/1080",
+      "imageHint": "leadership seminar"
     },
     {
       "id": "about-section",

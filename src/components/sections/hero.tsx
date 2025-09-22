@@ -38,7 +38,7 @@ export function Hero() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-primary/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
       <div className="relative z-10 flex h-full items-center pt-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-white">
