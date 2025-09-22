@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An engaging and professional leadership seminar in progress, with a person looking out over a vista.",
-      "imageUrl": "https://picsum.photos/seed/leadership-vista/1920/1080",
-      "imageHint": "leadership journey"
+      "description": "A group of mountaineers ascending a peak at sunrise, symbolizing the journey of leadership and overcoming challenges.",
+      "imageUrl": "https://picsum.photos/seed/summit-journey/1920/1080",
+      "imageHint": "leadership mountain"
     },
     {
       "id": "about-section",
