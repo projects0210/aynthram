@@ -51,15 +51,16 @@ export function Hero() {
               <p className="mt-6 text-lg md:text-xl leading-8 text-gray-200 text-balance">
                 Transform your leadership through immersive experiences that blend ancient Indian wisdom with modern practices. Because leadership is not just a skill — it's a mindset.
               </p>
-              <div className="mt-8 h-8 text-accent font-semibold text-lg md:text-xl overflow-hidden">
+              <div className="mt-10 h-12 text-accent font-semibold text-2xl md:text-3xl flex justify-center items-center overflow-hidden">
                 <div className="relative h-full w-full">
                   {slidingTexts.map((text, index) => (
                     <span
                       key={index}
-                      className="absolute w-full h-full transition-transform duration-700 ease-in-out"
+                      className="absolute w-full h-full transition-transform duration-1000 ease-in-out"
                       style={{
                         transform: `translateY(${(index - currentTextIndex) * 100}%)`,
-                        top: 0
+                        top: 0,
+                        left: 0
                       }}
                     >
                       {text}
