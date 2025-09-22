@@ -2,12 +2,18 @@ import Link from 'next/link';
 import { Linkedin, Twitter, Instagram } from 'lucide-react';
 import { AynthramLogo } from '@/components/logo';
 
-const sitemap = [
-  { name: "About", href: "#about" },
-  { name: "Programs", href: "#programs" },
-  { name: "Our Approach", href: "#experience" },
-  { name: "Impact", href: "#impact" },
-  { name: "Contact", href: "#contact" },
+const programs = [
+  { name: 'Corporate Leadership', href: '#programs' },
+  { name: 'Startup Founders', href: '#programs' },
+  { name: 'Mid-Level Managers', href: '#programs' },
+  { name: 'Educators & Innovators', href: '#programs' },
+];
+
+const company = [
+  { name: 'About Us', href: '#about' },
+  { name: 'Our Approach', href: '#experience' },
+  { name: 'Heritage & Culture', href: '#about' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 const socialLinks = [
@@ -36,10 +42,11 @@ export function Footer() {
                 ))}
             </div>
           </div>
-          <div className="lg:col-span-2 lg:col-start-7">
-            <h3 className="font-semibold tracking-wider uppercase">Sitemap</h3>
+
+          <div className="lg:col-span-2 lg:col-start-6">
+            <h3 className="font-semibold tracking-wider uppercase">Programs</h3>
             <ul className="mt-4 space-y-3">
-              {sitemap.map((item) => (
+              {programs.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {item.name}
@@ -48,7 +55,21 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div className="lg:col-span-3 lg:col-start-9">
+          
+          <div className="lg:col-span-2 lg:col-start-8">
+            <h3 className="font-semibold tracking-wider uppercase">Company</h3>
+            <ul className="mt-4 space-y-3">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-3 lg:col-start-10">
             <h3 className="font-semibold tracking-wider uppercase">Contact</h3>
             <ul className="mt-4 space-y-3 text-primary-foreground/70">
               <li><a href="mailto:vasudev.aynthram@gmail.com" className="hover:text-primary-foreground transition-colors">vasudev.aynthram@gmail.com</a></li>
