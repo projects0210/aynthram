@@ -43,7 +43,7 @@ export function Hero() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-white">
             <div className={`transition-all duration-1000 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <h1 className="font-headline text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl">
                 Crafting Leaders.
                 <br />
                 Cultivating Legacies.
