@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An inspiring image of hot air balloons floating over a valley at sunrise, symbolizing journey and new horizons.",
-      "imageUrl": "https://picsum.photos/seed/balloons/1920/1080",
-      "imageHint": "leadership journey"
+      "description": "An image of a chess set, symbolizing strategy, foresight, and leadership.",
+      "imageUrl": "https://picsum.photos/seed/chess/1920/1080",
+      "imageHint": "strategy leadership"
     },
     {
       "id": "about-section",
