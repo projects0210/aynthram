@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A silhouette of a person speaking on a stage, representing leadership and communication.",
-      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1920&h=1080&auto=format&fit=crop",
-      "imageHint": "leadership communication"
+      "description": "A speaker on stage at a conference, representing leadership and public speaking.",
+      "imageUrl": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1920&h=1080&auto=format&fit=crop",
+      "imageHint": "leadership conference"
     },
     {
       "id": "about-section",
