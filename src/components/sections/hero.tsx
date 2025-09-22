@@ -38,8 +38,8 @@ export function Hero() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-primary/70" />
-      <div className="relative z-10 flex h-full items-center">
+      <div className="absolute inset-0 bg-primary/80" />
+      <div className="relative z-10 flex h-full items-center pt-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-white">
             <div className={`transition-all duration-1000 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
@@ -51,8 +51,8 @@ export function Hero() {
               <p className="mt-6 text-lg md:text-xl leading-8 text-gray-200 text-balance">
                 Transform your leadership through immersive experiences that blend ancient Indian wisdom with modern practices. Because leadership is not just a skill — it's a mindset.
               </p>
-              <div className="mt-8 h-8 text-accent font-semibold text-xl md:text-2xl">
-                <div className="relative h-full w-full overflow-hidden">
+              <div className="mt-8 h-8 text-accent font-semibold text-xl md:text-2xl overflow-hidden">
+                <div className="relative h-full w-full">
                   {slidingTexts.map((text, index) => (
                     <span
                       key={index}

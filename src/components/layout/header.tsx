@@ -24,6 +24,7 @@ export function Header() {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Set initial state
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -33,14 +34,14 @@ export function Header() {
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent'}`}>
       <div className="container flex h-20 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <AynthramLogo className={`h-8 w-auto transition-colors duration-300 ${isScrolled ? 'text-primary' : 'text-white'}`} />
+          <AynthramLogo className={`h-8 w-auto transition-colors duration-300 ${isScrolled ? 'text-primary' : 'text-primary'}`} />
         </Link>
         <nav className="hidden md:flex md:items-center md:gap-6 text-sm font-medium">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className={`transition-colors hover:text-accent ${isScrolled ? 'text-foreground/80 hover:text-foreground' : 'text-white/80 hover:text-white'}`}
+              className={`transition-colors hover:text-accent ${isScrolled ? 'text-foreground/80 hover:text-foreground' : 'text-foreground/80 hover:text-foreground'}`}
             >
               {item.name}
             </Link>
@@ -48,14 +49,14 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-2">
-            <Button asChild className="hidden md:inline-flex" variant={isScrolled ? 'default' : 'outline'}>
+            <Button asChild className="hidden md:inline-flex" variant={isScrolled ? 'default' : 'default'}>
               <Link href="#contact">Get Started</Link>
             </Button>
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
-                  className={`px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden ${isScrolled ? 'text-primary' : 'text-white'}`}
+                  className={`px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden ${isScrolled ? 'text-primary' : 'text-primary'}`}
                 >
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle Menu</span>

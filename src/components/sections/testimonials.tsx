@@ -1,5 +1,7 @@
 "use client";
 
+import React from 'react';
+import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
   CarouselContent,
@@ -35,6 +37,10 @@ const testimonials = [
 ]
 
 export function Testimonials() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
+
   return (
     <section id="testimonials" className="w-full py-20 lg:py-32 bg-primary text-primary-foreground">
         <div className="container">
@@ -45,10 +51,13 @@ export function Testimonials() {
                 </h2>
             </div>
             <Carousel
+                plugins={[plugin.current]}
                 opts={{
                     align: "start",
                     loop: true,
                 }}
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
                 className="w-full max-w-4xl mx-auto mt-16"
             >
                 <CarouselContent>
