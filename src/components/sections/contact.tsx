@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { submitContactForm, type ContactFormState } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -86,7 +86,7 @@ export function Contact() {
 
               <div className="space-y-2">
                 <Label htmlFor="message">Tell us about your leadership goals...</Label>
-                <Textarea id="message" name="message" rows={4} required />
+                <Textarea id="message" name="message" rows={4} required placeholder="Your message..."/>
                  {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message.join(", ")}</p>}
               </div>
 
@@ -94,7 +94,7 @@ export function Contact() {
             </form>
           </CardContent>
         </Card>
-        <div className="space-y-8 pt-8">
+        <div className="space-y-8 pt-8 lg:pt-0">
              <Card className="bg-primary/5 border-primary/20">
                 <CardHeader className="flex flex-row items-center gap-4">
                     <Briefcase className="h-8 w-8 text-accent" />
@@ -103,7 +103,7 @@ export function Contact() {
                 <CardContent>
                     <p className="text-foreground/80 mb-4">From individual leadership growth to organization-wide cultural transformation, discover how Aynthram can help you build leaders who don't just stay relevant but redefine the game.</p>
                      <p className="text-foreground/80"><strong>Email:</strong> <a href="mailto:vasudev.aynthram@gmail.com" className="hover:underline">vasudev.aynthram@gmail.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+919703831819" className="hover:underline">+91 9703831819</a></p>
+                    <p className="text-foreground/80"><strong>Phone:</strong> <a href="tel:+919703831819" className="hover:underline">+91 9703831819</a></p>
                 </CardContent>
              </Card>
              <Card className="bg-primary/5 border-primary/20">
