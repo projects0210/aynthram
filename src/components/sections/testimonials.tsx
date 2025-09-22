@@ -38,7 +38,7 @@ const testimonials = [
 
 export function Testimonials() {
   const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
+    Autoplay({ delay: 4000, stopOnInteraction: true })
   )
 
   return (
@@ -60,16 +60,16 @@ export function Testimonials() {
                 onMouseLeave={plugin.current.reset}
                 className="w-full max-w-4xl mx-auto mt-16"
             >
-                <CarouselContent>
+                <CarouselContent className="-ml-4">
                     {testimonials.map((testimonial) => {
                         const image = PlaceHolderImages.find(p => p.id === testimonial.id);
                         return (
-                            <CarouselItem key={testimonial.id}>
-                                <div className="p-4">
-                                    <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
-                                        <CardContent className="flex flex-col items-center justify-center p-8 md:p-12 text-center">
+                            <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/1">
+                                <div className="p-1 h-full">
+                                    <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground h-full">
+                                        <CardContent className="flex flex-col items-center justify-center p-8 md:p-12 text-center h-full">
                                             <Quote className="h-10 w-10 text-accent" />
-                                            <p className="mt-6 text-xl md:text-2xl font-light text-balance">
+                                            <p className="mt-6 text-xl md:text-2xl font-light text-balance flex-grow">
                                                 "{testimonial.quote}"
                                             </p>
                                             <div className="mt-8 flex items-center gap-4">
