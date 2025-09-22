@@ -23,8 +23,12 @@ export function ScrollToTop() {
     const winHeightPx =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    const scrolled = (scrollPx / winHeightPx) * 100;
-    setProgress(scrolled);
+    if (winHeightPx > 0) {
+      const scrolled = (scrollPx / winHeightPx) * 100;
+      setProgress(scrolled);
+    } else {
+      setProgress(0);
+    }
   };
 
   const scrollToTop = () => {
@@ -51,7 +55,7 @@ export function ScrollToTop() {
       <Button
         onClick={scrollToTop}
         className={cn(
-          'h-16 w-16 rounded-full p-0 shadow-lg transition-opacity duration-300 relative bg-muted hover:bg-muted/80',
+          'h-16 w-16 rounded-full p-0 shadow-lg transition-opacity duration-300 relative bg-muted/80 hover:bg-muted',
           isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
         aria-label="Scroll to top"
@@ -66,22 +70,22 @@ export function ScrollToTop() {
             cx="32"
             cy="32"
             r="28"
-            stroke="hsl(var(--primary))"
-            strokeWidth="6"
+            stroke="hsl(var(--border))"
+            strokeWidth="4"
             fill="transparent"
-            className="text-primary/20"
+            className="opacity-50"
           />
           <circle
             cx="32"
             cy="32"
             r="28"
-            stroke="hsl(var(--primary))"
-            strokeWidth="6"
+            stroke="hsl(var(--accent))"
+            strokeWidth="4"
             fill="transparent"
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
             strokeLinecap="round"
-            className="transition-[stroke-dashoffset] duration-200"
+            className="transition-[stroke-dashoffset] duration-100"
           />
         </svg>
         <ArrowUp className="absolute h-6 w-6 text-primary" />
