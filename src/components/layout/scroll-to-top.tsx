@@ -70,15 +70,6 @@ export function ScrollToTop() {
             cx="32"
             cy="32"
             r="28"
-            stroke="hsl(var(--border))"
-            strokeWidth="4"
-            fill="transparent"
-            className="opacity-50"
-          />
-          <circle
-            cx="32"
-            cy="32"
-            r="28"
             stroke="hsl(var(--accent))"
             strokeWidth="4"
             fill="transparent"
@@ -88,7 +79,7 @@ export function ScrollToTop() {
             className="transition-[stroke-dashoffset] duration-100"
           />
         </svg>
-        <ArrowUp className="absolute h-6 w-6 text-primary" />
+        <ArrowUp className="absolute h-8 w-8 text-primary" />
       </Button>
     </div>
   );
