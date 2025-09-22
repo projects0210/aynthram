@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An inspiring image of a diverse team collaborating, symbolizing modern leadership.",
-      "imageUrl": "https://picsum.photos/seed/ascent/1920/1080",
+      "description": "An inspiring image of hot air balloons floating over a valley at sunrise, symbolizing journey and new horizons.",
+      "imageUrl": "https://picsum.photos/seed/balloons/1920/1080",
       "imageHint": "leadership journey"
     },
     {
