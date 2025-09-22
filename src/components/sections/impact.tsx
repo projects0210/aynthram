@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -40,7 +41,7 @@ export function Impact() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center text-center p-8 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10">
-              <stat.icon className="h-12 w-12 text-mustard" />
+              <stat.icon className="h-12 w-12 text-accent" />
               <p className="mt-4 text-5xl font-bold font-headline text-white">
                 {stat.value}
               </p>

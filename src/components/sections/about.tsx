@@ -28,7 +28,7 @@ export function About() {
                 {uniquePoints.map((point, index) => (
                   <li key={index} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <Check className="h-6 w-6 text-mustard" />
+                      <Check className="h-6 w-6 text-accent" />
                     </div>
                     <span className="ml-3 text-foreground/90">{point}</span>
                   </li>

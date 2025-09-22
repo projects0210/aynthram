@@ -28,8 +28,9 @@ const programs = [
 
 export function Programs() {
   return (
-    <section id="programs" className="w-full py-20 lg:py-32 bg-primary-foreground/20" style={{
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23243E55' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+    <section id="programs" className="w-full py-20 lg:py-32 bg-background" style={{
+      backgroundColor: 'hsl(var(--background))',
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='hsl(165, 45%, 19%)' fill-opacity='0.05'%3E%3Cpath d='M80 0v80H0V0h80zM40 20c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm0 40c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
     }}>
       <div className="container">
         <div className="text-center max-w-2xl mx-auto">
@@ -69,7 +70,7 @@ export function Programs() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="link" asChild className="p-0 text-accent font-bold group">
+                  <Button variant="link" asChild className="p-0 text-primary font-bold group">
                     <Link href="#contact">
                       Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>

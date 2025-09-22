@@ -7,8 +7,8 @@ export function Partners() {
     const partners = partnerIds.map(id => PlaceHolderImages.find(p => p.id === id)).filter(Boolean);
 
     return (
-        <section id="partners" className="w-full py-20 lg:py-24 bg-primary-foreground/20" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23243E55' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        <section id="partners" className="w-full py-20 lg:py-24 bg-background" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6.586l-2.828 2.828-1.414-1.414 2.828-2.828c.78-.78 2.048-.78 2.828 0l1.414 1.414-2.828 2.828-1.414-1.414zM40 32c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM8 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6z' fill='hsl(165, 45%, 19%)' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E")`,
         }}>
             <div className="container">
                 <h2 className="text-center text-lg font-semibold text-foreground/60 tracking-wider">

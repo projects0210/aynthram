@@ -53,8 +53,8 @@ export function Experience() {
                 {index < experienceSteps.length -1 && (
                     <div className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 h-full w-0.5 bg-border -z-10" />
                 )}
-                <div className="bg-mustard/10 p-4 rounded-full border border-mustard/20">
-                    <step.icon className="h-8 w-8 text-mustard" />
+                <div className="bg-accent/10 p-4 rounded-full border border-accent/20">
+                    <step.icon className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="mt-6 font-headline text-xl font-semibold text-primary">{step.title}</h3>
                 <p className="mt-2 text-foreground/80 text-sm">{step.description}</p>

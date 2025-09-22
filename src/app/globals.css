@@ -16,8 +16,8 @@
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 45 87% 66%; /* #EDC974 */
-    --accent-foreground: 165 45% 19%;
+    --accent: 16 84% 57%; /* #F56529 - A reddish-orange from the image */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
@@ -44,13 +44,13 @@
     --secondary-foreground: 52 94% 94%;
     --muted: 165 45% 15%;
     --muted-foreground: 52 94% 80%;
-    --accent: 45 87% 66%; /* Golden yellow stays the same */
-    --accent-foreground: 165 45% 19%;
+    --accent: 16 84% 57%; /* Reddish-orange */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 165 45% 20%;
     --input: 165 45% 20%;
-    --ring: 45 87% 66%;
+    --ring: 16 84% 57%;
   }
 }
  
