@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An engaging and professional leadership seminar in progress.",
-      "imageUrl": "https://picsum.photos/seed/leadership-seminar/1920/1080",
-      "imageHint": "leadership seminar"
+      "description": "An engaging and professional leadership seminar in progress, with a person looking out over a vista.",
+      "imageUrl": "https://picsum.photos/seed/leadership-vista/1920/1080",
+      "imageHint": "leadership journey"
     },
     {
       "id": "about-section",
