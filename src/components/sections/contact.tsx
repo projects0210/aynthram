@@ -28,7 +28,7 @@ function SubmitButton() {
 
   return (
     <Button type="submit" className="w-full uppercase tracking-wider font-bold" size="lg" disabled={pending}>
-      {pending ? "Submitting..." : "Enquire Now"}
+      {pending ? "Submitting..." : "Start the Conversation"}
     </Button>
   );
 }
@@ -57,67 +57,41 @@ export function Contact() {
 
   return (
     <section id="contact" className="w-full py-20 lg:py-32 bg-background">
-      <div className="container grid lg:grid-cols-2 gap-16 items-center">
-         <div className="space-y-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-accent">Let's Connect</span>
+        <div className="container text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary leading-tight">
-              Begin Your Transformation
+              Begin Your Leadership Transformation
             </h2>
-            <p className="text-lg text-foreground/80 text-balance">
-              Whether you're looking to book a program, explore a partnership, or simply learn more about our unique approach, we'd love to hear from you. Fill out the form, and our program manager will be in touch within 48 hours.
+            <p className="mt-6 text-lg text-foreground/80 text-balance">
+             Ready to craft your leadership legacy? Connect with us to explore how ancient wisdom can transform your modern leadership journey.
             </p>
-             <div className="space-y-4 text-lg">
-                <p><strong>Email:</strong> <a href="mailto:vasudev.aynthram@gmail.com" className="text-primary hover:underline">vasudev.aynthram@gmail.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+919703831819" className="text-primary hover:underline">+91 9703831819</a></p>
-            </div>
         </div>
+      <div className="container grid lg:grid-cols-2 gap-16 items-start mt-16">
         <Card className="shadow-xl">
           <CardHeader>
-            <CardTitle className="font-headline text-3xl text-primary">Book a Program</CardTitle>
-            <CardDescription>
-              Start your leadership transformation today.
-            </CardDescription>
+            <CardTitle className="font-headline text-3xl text-primary">Get In Touch</CardTitle>
           </CardHeader>
           <CardContent>
             <form action={formAction} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" name="name" required />
+                  <Input id="name" name="name" required placeholder="Your Name" />
                   {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name.join(", ")}</p>}
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="organization">Organization (Optional)</Label>
-                  <Input id="organization" name="organization" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
+                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" name="email" type="email" required />
+                  <Input id="email" name="email" type="email" required placeholder="Email Address" />
                    {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email.join(", ")}</p>}
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone (Optional)</Label>
-                  <Input id="phone" name="phone" type="tel" />
-                </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="program">Program of Interest</Label>
-                <Select name="program">
-                  <SelectTrigger id="program">
-                    <SelectValue placeholder="Select a program" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {programs.map(p => <SelectItem key={p} value={p}>{p}</SelectItem>)}
-                  </SelectContent>
-                </Select>
+                  <Label htmlFor="organization">Organization (Optional)</Label>
+                  <Input id="organization" name="organization" placeholder="Your Organization"/>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Your Message</Label>
+                <Label htmlFor="message">Tell us about your leadership goals...</Label>
                 <Textarea id="message" name="message" rows={4} required />
                  {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message.join(", ")}</p>}
               </div>
@@ -126,6 +100,25 @@ export function Contact() {
             </form>
           </CardContent>
         </Card>
+        <div className="space-y-8">
+            <div className="space-y-4">
+                <h3 className="font-headline text-2xl font-bold text-primary">Connect with Our Founder</h3>
+                <div className="space-y-2 text-lg text-foreground/80">
+                    <p className="font-semibold text-primary">Vasudev Vangara</p>
+                    <p className="text-base -mt-2">Founder & CEO</p>
+                    <p><a href="mailto:vasudev.aynthram@gmail.com" className="hover:underline">vasudev.aynthram@gmail.com</a></p>
+                    <p><a href="tel:+919703831819" className="hover:underline">+91 9703831819</a></p>
+                </div>
+            </div>
+             <Card className="bg-primary/5 border-primary/20">
+                <CardHeader>
+                    <CardTitle className="font-headline text-2xl text-primary">Transform Your Organization</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-foreground/80">From individual leadership growth to organization-wide cultural transformation, discover how Aynthram can help you build leaders who don't just stay relevant but redefine the game.</p>
+                </CardContent>
+             </Card>
+        </div>
       </div>
     </section>
   );
