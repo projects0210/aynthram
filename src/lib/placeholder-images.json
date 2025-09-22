@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An inspiring image of a mentor guiding a team, symbolizing leadership and growth.",
-      "imageUrl": "https://picsum.photos/seed/leadership-meeting/1920/1080",
-      "imageHint": "leadership meeting"
+      "description": "An inspiring image of a leader looking out, symbolizing vision and forward-thinking.",
+      "imageUrl": "https://picsum.photos/seed/leadership-vision/1920/1080",
+      "imageHint": "leadership vision"
     },
     {
       "id": "about-section",
