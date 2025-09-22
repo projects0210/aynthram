@@ -8,6 +8,7 @@ import { Impact } from "@/components/sections/impact";
 import { Team } from "@/components/sections/team";
 import { Partners } from "@/components/sections/partners";
 import { Contact } from "@/components/sections/contact";
+import { Testimonials } from "@/components/sections/testimonials";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Programs />
         <Experience />
         <Impact />
+        <Testimonials />
         <Team />
         <Partners />
         <Contact />

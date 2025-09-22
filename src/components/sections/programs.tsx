@@ -1,54 +1,55 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const programs = [
   {
     id: 'program-academy',
     title: 'Leadership Academy',
-    description: 'A 3-day immersive program designed for senior leaders to disconnect from routine and reconnect with their core purpose through art-based interventions.',
+    description: 'A 3-day immersive program for senior leaders to disconnect from routine and reconnect with their core purpose through art-based interventions.',
+    audience: 'Senior Leaders & Executives',
     themes: ['"Quiet Quitting → Quiet Leading"', 'Leading Gen Z'],
   },
   {
     id: 'program-escape',
     title: "Founders' Escape",
-    description: 'A curated retreat for entrepreneurs and founders to combat burnout, foster creativity, and develop sustainable leadership strategies for their ventures.',
+    description: 'A curated retreat for entrepreneurs to combat burnout, foster creativity, and develop sustainable strategies for their ventures.',
+    audience: 'Founders & Entrepreneurs',
     themes: ['Design Thinking for Frugal Innovation'],
   },
   {
     id: 'program-corporate',
     title: 'Corporate & Experiential Tourism',
-    description: "Customized experiential programs and retreats for corporate teams, blending leadership development with the unique cultural heritage of Odisha.",
+    description: "Custom experiential programs and retreats for corporate teams, blending leadership development with the unique cultural heritage of Odisha.",
+    audience: 'Corporate Teams',
     themes: ['Team Cohesion', 'Cross-cultural Leadership'],
   },
 ];
 
 export function Programs() {
   return (
-    <section id="programs" className="w-full py-20 lg:py-32 bg-background" style={{
-      backgroundColor: 'hsl(var(--background))',
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='hsl(165, 45%, 19%)' fill-opacity='0.05'%3E%3Cpath d='M80 0v80H0V0h80zM40 20c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm0 40c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-    }}>
+    <section id="programs" className="w-full py-20 lg:py-32 bg-primary/5">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto">
           <span className="text-sm font-bold uppercase tracking-wider text-accent">Our Offerings</span>
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mt-2">
+          <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
             Programs for a New Generation of Leaders
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">
+          <p className="mt-6 text-lg text-foreground/80">
             Each program is a carefully crafted journey, blending ancient wisdom with modern leadership challenges.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {programs.map((program) => {
             const image = PlaceHolderImages.find(p => p.id === program.id);
             return (
-              <Card key={program.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <Card key={program.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 {image && (
-                  <div className="relative h-48 w-full">
+                  <div className="relative h-56 w-full">
                     <Image
                       src={image.imageUrl}
                       alt={image.description}
@@ -60,19 +61,20 @@ export function Programs() {
                 )}
                 <CardHeader>
                   <CardTitle className="font-headline text-2xl text-primary">{program.title}</CardTitle>
+                  <CardDescription>{program.audience}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex-grow">
+                <CardContent className="flex-grow space-y-4">
                   <p className="text-foreground/80">{program.description}</p>
-                  <div className="mt-4 space-y-1">
+                  <div className="flex flex-wrap gap-2">
                     {program.themes.map(theme => (
-                        <p key={theme} className="text-sm text-foreground/60">{theme}</p>
+                        <Badge key={theme} variant="secondary" className="font-normal">{theme}</Badge>
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="bg-muted/40 py-4">
                   <Button variant="link" asChild className="p-0 text-primary font-bold group">
                     <Link href="#contact">
-                      Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      Book This Program <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </Button>
                 </CardFooter>

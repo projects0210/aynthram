@@ -57,12 +57,25 @@ export function Contact() {
 
   return (
     <section id="contact" className="w-full py-20 lg:py-32 bg-background">
-      <div className="container">
-        <Card className="max-w-2xl mx-auto shadow-xl">
-          <CardHeader className="text-center">
-            <CardTitle className="font-headline text-3xl md:text-4xl text-primary">Book a Program</CardTitle>
-            <CardDescription className="text-lg">
-              Start your leadership transformation today. Fill out the form below to get in touch.
+      <div className="container grid lg:grid-cols-2 gap-16 items-center">
+         <div className="space-y-6">
+            <span className="text-sm font-bold uppercase tracking-wider text-accent">Let's Connect</span>
+            <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary leading-tight">
+              Begin Your Transformation
+            </h2>
+            <p className="text-lg text-foreground/80 text-balance">
+              Whether you're looking to book a program, explore a partnership, or simply learn more about our unique approach, we'd love to hear from you. Fill out the form, and our program manager will be in touch within 48 hours.
+            </p>
+             <div className="space-y-4 text-lg">
+                <p><strong>Email:</strong> <a href="mailto:vasudev.aynthram@gmail.com" className="text-primary hover:underline">vasudev.aynthram@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+919703831819" className="text-primary hover:underline">+91 9703831819</a></p>
+            </div>
+        </div>
+        <Card className="shadow-xl">
+          <CardHeader>
+            <CardTitle className="font-headline text-3xl text-primary">Book a Program</CardTitle>
+            <CardDescription>
+              Start your leadership transformation today.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -105,7 +118,7 @@ export function Contact() {
 
               <div className="space-y-2">
                 <Label htmlFor="message">Your Message</Label>
-                <Textarea id="message" name="message" rows={5} required />
+                <Textarea id="message" name="message" rows={4} required />
                  {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message.join(", ")}</p>}
               </div>
 

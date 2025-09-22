@@ -1,4 +1,4 @@
-import { HandMetal, MessageSquareQuote, BrainCircuit, Flame, ListChecks } from 'lucide-react';
+import { HandMetal, MessageSquareQuote, BrainCircuit, Flame, ListChecks, ArrowDown } from 'lucide-react';
 
 const experienceSteps = [
   {
@@ -33,31 +33,50 @@ export function Experience() {
     <section id="experience" className="w-full py-20 lg:py-32 bg-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-sm font-bold uppercase tracking-wider text-accent">Our Method</span>
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mt-2">
+          <span className="text-sm font-bold uppercase tracking-wider text-accent">Our Approach</span>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
             The Aynthram Experience
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">
+          <p className="mt-6 text-lg text-foreground/80">
             Our methodology is built on a foundation of art-based experiential interventions, cognitive reframing, and modular theme-based programs.
           </p>
         </div>
 
-        <div className="relative mt-16">
-          {/* Desktop timeline line */}
-          <div className="hidden lg:block absolute top-8 left-0 w-full h-0.5 bg-border -z-10" />
+        <div className="mt-20 max-w-4xl mx-auto">
+          <div className="relative">
+            {/* Connecting line */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-5 h-full w-0.5 bg-border -z-10" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12">
             {experienceSteps.map((step, index) => (
-              <div key={index} className="relative flex flex-col items-center text-center lg:items-start lg:text-left">
-                {/* Mobile/Tablet connecting line */}
-                {index < experienceSteps.length -1 && (
-                    <div className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 h-full w-0.5 bg-border -z-10" />
-                )}
-                <div className="bg-accent/10 p-4 rounded-full border border-accent/20">
-                    <step.icon className="h-8 w-8 text-accent" />
+              <div key={index} className="relative mb-12 flex items-center w-full">
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                  {index % 2 === 0 && (
+                    <div className="text-right">
+                       <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
+                       <p className="mt-2 text-foreground/80">{step.description}</p>
+                    </div>
+                  )}
                 </div>
-                <h3 className="mt-6 font-headline text-xl font-semibold text-primary">{step.title}</h3>
-                <p className="mt-2 text-foreground/80 text-sm">{step.description}</p>
+
+                <div className="absolute left-1/2 -translate-x-1/2 bg-background z-10">
+                    <div className="bg-accent/10 p-4 rounded-full border-2 border-accent/20">
+                        <step.icon className="h-8 w-8 text-accent" />
+                    </div>
+                </div>
+
+                 <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8' : 'pr-8'}`}>
+                   {index % 2 !== 0 && (
+                     <div className="text-left">
+                       <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
+                       <p className="mt-2 text-foreground/80">{step.description}</p>
+                    </div>
+                  )}
+                </div>
+                 {index < experienceSteps.length - 1 && (
+                     <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-8 text-border">
+                        <ArrowDown className="h-4 w-4" />
+                     </div>
+                 )}
               </div>
             ))}
           </div>

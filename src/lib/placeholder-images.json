@@ -7,6 +7,12 @@
       "imageHint": "artisan retreat"
     },
     {
+      "id": "about-section",
+      "description": "An image showing the hands of an artisan working on a craft.",
+      "imageUrl": "https://picsum.photos/seed/about/800/1000",
+      "imageHint": "artisan hands craft"
+    },
+    {
       "id": "vasudev-vangara",
       "description": "Profile photo of Vasudev Vangara",
       "imageUrl": "https://picsum.photos/seed/vasudev/400/400",
@@ -55,34 +61,58 @@
       "imageHint": "team building"
     },
     {
+      "id": "testimonial-1",
+      "description": "Profile photo of a testimonial author",
+      "imageUrl": "https://picsum.photos/seed/test1/100/100",
+      "imageHint": "woman face"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Profile photo of a testimonial author",
+      "imageUrl": "https://picsum.photos/seed/test2/100/100",
+      "imageHint": "man face"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Profile photo of a testimonial author",
+      "imageUrl": "https://picsum.photos/seed/test3/100/100",
+      "imageHint": "professional person"
+    },
+    {
       "id": "partner-1",
       "description": "Partner logo 1",
-      "imageUrl": "https://picsum.photos/seed/partner1/200/100",
+      "imageUrl": "https://picsum.photos/seed/partner1/300/100",
       "imageHint": "company logo"
     },
     {
       "id": "partner-2",
       "description": "Partner logo 2",
-      "imageUrl": "https://picsum.photos/seed/partner2/200/100",
+      "imageUrl": "https://picsum.photos/seed/partner2/300/100",
       "imageHint": "logo brand"
     },
     {
       "id": "partner-3",
       "description": "Partner logo 3",
-      "imageUrl": "https://picsum.photos/seed/partner3/200/100",
+      "imageUrl": "https://picsum.photos/seed/partner3/300/100",
       "imageHint": "business logo"
     },
     {
       "id": "partner-4",
       "description": "Partner logo 4",
-      "imageUrl": "https://picsum.photos/seed/partner4/200/100",
+      "imageUrl": "https://picsum.photos/seed/partner4/300/100",
       "imageHint": "corporate logo"
     },
     {
       "id": "partner-5",
       "description": "Partner logo 5",
-      "imageUrl": "https://picsum.photos/seed/partner5/200/100",
+      "imageUrl": "https://picsum.photos/seed/partner5/300/100",
       "imageHint": "startup logo"
+    },
+     {
+      "id": "partner-6",
+      "description": "Partner logo 6",
+      "imageUrl": "https://picsum.photos/seed/partner6/300/100",
+      "imageHint": "tech logo"
     }
   ]
 }
