@@ -90,14 +90,12 @@
   flex: 0 0 var(--slide-size);
   min-width: 0;
   position: relative;
-  transition: transform 500ms ease, opacity 500ms ease, filter 500ms ease;
+  transition: transform 500ms ease, opacity 500ms ease;
   opacity: 0.4;
-  filter: blur(2px);
   transform: scale(0.9);
 }
 
 .embla__slide-testimonials.is-active {
   opacity: 1;
-  filter: blur(0px);
   transform: scale(1);
 }
