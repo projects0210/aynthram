@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,14 +14,29 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import programAcademy from '@/public/images/program-academy.jpg';
+import programEscape from '@/public/images/program-escape.jpg';
+import programCorporate from '@/public/images/program-corporate.jpg';
 
-const programs = [
+type Program = {
+  id: string;
+  title: string;
+  description: string;
+  audience: string;
+  themes: string[];
+  image: StaticImageData;
+  imageAlt: string;
+  imageHint: string;
+}
+
+const programs: Program[] = [
   {
     id: 'program-academy',
     title: 'Leadership Academy',
     description: 'A 3-day immersive program for senior leaders to disconnect from routine and reconnect with their core purpose through art-based interventions.',
     audience: 'Senior Leaders & Executives',
     themes: ['"Quiet Quitting → Quiet Leading"', 'Leading Gen Z'],
+    image: programAcademy,
     imageAlt: "Image for Leadership Academy program",
     imageHint: "leadership workshop"
   },
@@ -31,6 +46,7 @@ const programs = [
     description: 'A curated retreat for entrepreneurs to combat burnout, foster creativity, and develop sustainable strategies for their ventures.',
     audience: 'Founders & Entrepreneurs',
     themes: ['Design Thinking for Frugal Innovation'],
+    image: programEscape,
     imageAlt: "Image for Founders' Escape program",
     imageHint: "founder retreat"
   },
@@ -40,6 +56,7 @@ const programs = [
     description: "Custom experiential programs and retreats for corporate teams, blending leadership development with the unique cultural heritage of Odisha.",
     audience: 'Corporate Teams',
     themes: ['Team Cohesion', 'Cross-cultural Leadership'],
+    image: programCorporate,
     imageAlt: "Image for Corporate Retreats program",
     imageHint: "team building"
   },
@@ -64,7 +81,7 @@ export function Programs() {
               <Card key={program.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-56 w-full">
                   <Image
-                    src={`/images/${program.id}.jpg`}
+                    src={program.image}
                     alt={program.imageAlt}
                     data-ai-hint={program.imageHint}
                     fill

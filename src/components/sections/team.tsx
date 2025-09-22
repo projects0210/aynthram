@@ -1,12 +1,27 @@
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
+import vasudev from '@/public/images/vasudev-vangara.jpg';
+import gaman from '@/public/images/gaman-palem.jpg';
+import adarsh from '@/public/images/adarsh-chintalapti.jpg';
+import chaitanya from '@/public/images/chaitanya-muppala.jpg';
+import yamini from '@/public/images/yamini-rapeti.jpg';
 
-const teamMembers = [
+type TeamMember = {
+  id: string;
+  name: string;
+  role: string;
+  image: StaticImageData;
+  imageAlt: string;
+  imageHint: string;
+}
+
+const teamMembers: TeamMember[] = [
   {
     id: 'vasudev-vangara',
     name: 'Vasudev Vangara',
     role: 'Founder & CEO',
+    image: vasudev,
     imageAlt: 'Profile photo of Vasudev Vangara',
     imageHint: 'man portrait',
   },
@@ -14,6 +29,7 @@ const teamMembers = [
     id: 'gaman-palem',
     name: 'Gaman Palem',
     role: 'Artist & Co-Creator',
+    image: gaman,
     imageAlt: 'Profile photo of Gaman Palem',
     imageHint: 'artist portrait',
   },
@@ -21,6 +37,7 @@ const teamMembers = [
     id: 'adarsh-chintalapti',
     name: 'Adarsh Chintalapti',
     role: 'Strategic Advisor',
+    image: adarsh,
     imageAlt: 'Profile photo of Adarsh Chintalapti',
     imageHint: 'person portrait',
   },
@@ -28,6 +45,7 @@ const teamMembers = [
     id: 'chaitanya-muppala',
     name: 'Chaitanya Muppala',
     role: 'Partnerships Lead',
+    image: chaitanya,
     imageAlt: 'Profile photo of Chaitanya Muppala',
     imageHint: 'man professional',
   },
@@ -35,6 +53,7 @@ const teamMembers = [
     id: 'yamini-rapeti',
     name: 'Yamini Rapeti',
     role: 'Program Manager',
+    image: yamini,
     imageAlt: 'Profile photo of Yamini Rapeti',
     imageHint: 'woman professional',
   },
@@ -59,7 +78,7 @@ export function Team() {
               <div key={member.name} className="text-center group">
                  <div className="relative aspect-square w-full max-w-[200px] mx-auto">
                     <Image
-                      src={`/images/${member.id}.jpg`}
+                      src={member.image}
                       alt={member.imageAlt}
                       data-ai-hint={member.imageHint}
                       fill

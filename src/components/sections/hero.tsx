@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { SinceBadge } from '@/components/since-badge';
+import heroBg from '@/public/images/hero-background.jpg';
 
 const slidingTexts = [
   "Fostering Innovation.",
@@ -28,7 +29,7 @@ export function Hero() {
   return (
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center">
       <Image
-          src="/images/hero-background.jpg"
+          src={heroBg}
           alt="A leader passionately delivering a speech from a podium at a formal event."
           data-ai-hint="leadership speech"
           fill
