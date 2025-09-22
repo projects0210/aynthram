@@ -38,8 +38,8 @@ export function Hero() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
-      <div className="relative z-10 container flex h-full items-center">
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-primary/30 lg:bg-gradient-to-r lg:from-primary/90 lg:via-primary/70 lg:to-transparent" />
+      <div className="relative z-10 container flex h-full items-center pt-20 pb-12 lg:py-0">
         <div className="max-w-xl text-white">
           <div className={`transition-all duration-1000 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h1 className="font-headline text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl">
