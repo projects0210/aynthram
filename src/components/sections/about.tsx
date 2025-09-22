@@ -18,7 +18,7 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <SinceBadge />
+              <SinceBadge className="text-primary/70" />
               <span className="text-sm font-bold uppercase tracking-wider text-accent">Our Mission</span>
             </div>
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary leading-tight">
