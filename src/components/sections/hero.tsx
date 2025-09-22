@@ -43,12 +43,12 @@ export function Hero() {
       <div className="relative z-10 container flex h-full items-center justify-center text-center lg:justify-start lg:text-left pt-20 pb-12 lg:py-0 px-4">
         <div className="max-w-xl text-white">
           <div className={`transition-all duration-1000 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <SinceBadge />
             <h1 className="font-headline mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
               <span className="text-accent">Crafting Leaders.</span>
               <br />
               Cultivating Legacies.
             </h1>
-            <SinceBadge className="mt-4" />
             <p className="mt-6 text-md md:text-lg leading-8 text-gray-200 text-balance">
               Transform your leadership through immersive experiences that blend ancient Indian wisdom with modern practices. Because leadership is not just a skill — it's a mindset.
             </p>
