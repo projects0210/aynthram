@@ -33,12 +33,12 @@ const teamMembers = [
 
 export function Team() {
   return (
-    <section id="team" className="w-full py-20 lg:py-32 bg-background">
+    <section id="team" className="w-full py-20 lg:py-32 bg-primary/5">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-sm font-bold uppercase tracking-wider text-accent">Our Team</span>
           <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary mt-4 leading-tight">
-            The Minds Behind the Mission
+            Meet Our Team
           </h2>
           <p className="mt-6 text-lg text-foreground/80">
             A collective of visionaries, artists, and strategists dedicated to redefining leadership through the power of art.
