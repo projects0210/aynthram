@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An old, strong tree with deep roots, symbolizing stability, growth, and legacy in a serene, professional setting.",
-      "imageUrl": "https://picsum.photos/seed/legacy-tree/1920/1080",
-      "imageHint": "leadership legacy"
+      "description": "An abstract sculpture that symbolizes vision and creative leadership.",
+      "imageUrl": "https://picsum.photos/seed/vision-sculpture/1920/1080",
+      "imageHint": "leadership art"
     },
     {
       "id": "about-section",
