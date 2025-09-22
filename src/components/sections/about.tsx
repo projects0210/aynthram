@@ -1,6 +1,7 @@
 import { CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SinceBadge } from '@/components/since-badge';
 
 const uniquePoints = [
   "Art-Led Immersion: Deeply engaging experiences that foster creativity and innovative thinking.",
@@ -16,7 +17,10 @@ export function About() {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="space-y-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-accent">Our Mission</span>
+            <div className="space-y-3">
+              <SinceBadge />
+              <span className="text-sm font-bold uppercase tracking-wider text-accent">Our Mission</span>
+            </div>
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary leading-tight">
               Transforming Leaders, Empowering Artisans, Preserving Heritage.
             </h2>
