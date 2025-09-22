@@ -9,6 +9,7 @@ import { Team } from "@/components/sections/team";
 import { Partners } from "@/components/sections/partners";
 import { Contact } from "@/components/sections/contact";
 import { Testimonials } from "@/components/sections/testimonials";
+import { TaglineBanner } from "@/components/sections/tagline-banner";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Team />
         <Partners />
         <Contact />
+        <TaglineBanner />
       </main>
       <Footer />
     </div>
