@@ -1,4 +1,4 @@
-import { HandMetal, MessageSquareQuote, BrainCircuit, Flame, ListChecks, ArrowDown } from 'lucide-react';
+import { HandMetal, MessageSquareQuote, BrainCircuit, Flame, ListChecks } from 'lucide-react';
 
 const experienceSteps = [
   {
@@ -42,52 +42,45 @@ export function Experience() {
           </p>
         </div>
 
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Connecting line */}
-            <div className="absolute left-1/2 top-5 h-full w-0.5 -translate-x-1/2 bg-border" />
+        <div className="relative mt-20 max-w-4xl mx-auto">
+          {/* Central Line */}
+          <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border" />
 
-            {experienceSteps.map((step, index) => (
-              <div
-                key={index}
-                className="relative mb-16 flex w-full items-center justify-between"
-              >
-                {/* Left side content */}
-                <div className={`w-1/2 pr-8 ${index % 2 !== 0 ? 'order-1' : 'order-3'}`}>
-                  {index % 2 === 0 && (
-                    <div className="text-right">
-                      <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
-                      <p className="mt-2 text-foreground/80">{step.description}</p>
-                    </div>
-                  )}
+          {experienceSteps.map((step, index) => (
+            <div key={index} className="relative mb-12">
+              <div className="flex items-center">
+                {/* Content */}
+                <div
+                  className={`w-1/2 ${
+                    index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'
+                  }`}
+                >
+                  <div
+                    className={`inline-block ${
+                      index % 2 === 0 ? 'order-1' : 'order-3'
+                    }`}
+                  >
+                    <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
+                    <p className="mt-2 text-foreground/80">{step.description}</p>
+                  </div>
                 </div>
 
-                {/* Center icon and arrow */}
-                <div className="order-2 flex-shrink-0">
-                    <div className="z-10 bg-background">
-                        <div className="bg-accent/10 p-4 rounded-full border-2 border-accent/20">
-                            <step.icon className="h-8 w-8 text-accent" />
-                        </div>
-                    </div>
-                    {index < experienceSteps.length - 1 && (
-                     <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-12 text-border">
-                        <ArrowDown className="h-4 w-4" />
-                     </div>
-                 )}
-                </div>
+                {/* Spacer to push content to the other side */}
+                <div
+                  className={`w-1/2 ${
+                    index % 2 === 0 ? 'order-3' : 'order-1'
+                  }`}
+                />
+              </div>
 
-                {/* Right side content */}
-                <div className={`w-1/2 pl-8 ${index % 2 !== 0 ? 'order-3' : 'order-1'}`}>
-                   {index % 2 !== 0 && (
-                     <div className="text-left">
-                       <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
-                       <p className="mt-2 text-foreground/80">{step.description}</p>
-                    </div>
-                  )}
+              {/* Icon in the middle */}
+              <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 bg-background">
+                <div className="bg-accent/10 p-4 rounded-full border-2 border-accent/20">
+                  <step.icon className="h-8 w-8 text-accent" />
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
