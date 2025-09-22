@@ -1,3 +1,88 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Hero background image of an artisan at a retreat",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "artisan retreat"
+    },
+    {
+      "id": "vasudev-vangara",
+      "description": "Profile photo of Vasudev Vangara",
+      "imageUrl": "https://picsum.photos/seed/vasudev/400/400",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "gaman-palem",
+      "description": "Profile photo of Gaman Palem",
+      "imageUrl": "https://picsum.photos/seed/gaman/400/400",
+      "imageHint": "artist portrait"
+    },
+    {
+      "id": "adarsh-chintalapti",
+      "description": "Profile photo of Adarsh Chintalapti",
+      "imageUrl": "https://picsum.photos/seed/adarsh/400/400",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "chaitanya-muppala",
+      "description": "Profile photo of Chaitanya Muppala",
+      "imageUrl": "https://picsum.photos/seed/chaitanya/400/400",
+      "imageHint": "man professional"
+    },
+    {
+      "id": "yamini-rapeti",
+      "description": "Profile photo of Yamini Rapeti",
+      "imageUrl": "https://picsum.photos/seed/yamini/400/400",
+      "imageHint": "woman professional"
+    },
+    {
+      "id": "program-academy",
+      "description": "Image for Leadership Academy program",
+      "imageUrl": "https://picsum.photos/seed/academy/600/400",
+      "imageHint": "leadership workshop"
+    },
+    {
+      "id": "program-escape",
+      "description": "Image for Founders' Escape program",
+      "imageUrl": "https://picsum.photos/seed/escape/600/400",
+      "imageHint": "founder retreat"
+    },
+    {
+      "id": "program-corporate",
+      "description": "Image for Corporate Retreats program",
+      "imageUrl": "https://picsum.photos/seed/corporate/600/400",
+      "imageHint": "team building"
+    },
+    {
+      "id": "partner-1",
+      "description": "Partner logo 1",
+      "imageUrl": "https://picsum.photos/seed/partner1/200/100",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Partner logo 2",
+      "imageUrl": "https://picsum.photos/seed/partner2/200/100",
+      "imageHint": "logo brand"
+    },
+    {
+      "id": "partner-3",
+      "description": "Partner logo 3",
+      "imageUrl": "https://picsum.photos/seed/partner3/200/100",
+      "imageHint": "business logo"
+    },
+    {
+      "id": "partner-4",
+      "description": "Partner logo 4",
+      "imageUrl": "https://picsum.photos/seed/partner4/200/100",
+      "imageHint": "corporate logo"
+    },
+    {
+      "id": "partner-5",
+      "description": "Partner logo 5",
+      "imageUrl": "https://picsum.photos/seed/partner5/200/100",
+      "imageHint": "startup logo"
+    }
+  ]
 }
