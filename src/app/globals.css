@@ -6,9 +6,9 @@
   :root {
     --background: 52 94% 94%; /* #FEFBEB */
     --foreground: 0 0% 13%; /* #222222 */
-    --card: 52 94% 94%;
+    --card: 0 0% 100%; /* Use white for cards to stand out on cream background */
     --card-foreground: 0 0% 13%;
-    --popover: 52 94% 94%;
+    --popover: 0 0% 100%;
     --popover-foreground: 0 0% 13%;
     --primary: 165 45% 19%; /* #1B443A */
     --primary-foreground: 52 94% 94%;
@@ -34,7 +34,7 @@
   .dark {
     --background: 165 45% 10%; /* A dark version of the green */
     --foreground: 52 94% 94%; /* Light yellow */
-    --card: 165 45% 10%;
+    --card: 165 45% 12%; /* Slightly lighter than background for cards */
     --card-foreground: 52 94% 94%;
     --popover: 165 45% 10%;
     --popover-foreground: 52 94% 94%;

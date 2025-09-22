@@ -21,7 +21,7 @@ export function About() {
               We provide transformative leadership programs that integrate the wisdom of traditional arts to cultivate mindful, innovative, and impactful leaders.
             </p>
           </div>
-          <Card className="bg-background/50 border-mustard/20 shadow-lg">
+          <Card className="bg-card shadow-lg">
             <CardContent className="p-8">
               <h3 className="font-headline text-2xl font-semibold text-primary mb-6">What Makes Aynthram Unique?</h3>
               <ul className="space-y-4">
