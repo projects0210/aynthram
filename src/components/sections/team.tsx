@@ -1,17 +1,12 @@
-import Image, { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
-import vasudev from '@/public/images/vasudev-vangara.jpg';
-import gaman from '@/public/images/gaman-palem.jpg';
-import adarsh from '@/public/images/adarsh-chintalapti.jpg';
-import chaitanya from '@/public/images/chaitanya-muppala.jpg';
-import yamini from '@/public/images/yamini-rapeti.jpg';
 
 type TeamMember = {
   id: string;
   name: string;
   role: string;
-  image: StaticImageData;
+  image: string;
   imageAlt: string;
   imageHint: string;
 }
@@ -21,7 +16,7 @@ const teamMembers: TeamMember[] = [
     id: 'vasudev-vangara',
     name: 'Vasudev Vangara',
     role: 'Founder & CEO',
-    image: vasudev,
+    image: '/images/vasudev-vangara.jpg',
     imageAlt: 'Profile photo of Vasudev Vangara',
     imageHint: 'man portrait',
   },
@@ -29,7 +24,7 @@ const teamMembers: TeamMember[] = [
     id: 'gaman-palem',
     name: 'Gaman Palem',
     role: 'Artist & Co-Creator',
-    image: gaman,
+    image: '/images/gaman-palem.jpg',
     imageAlt: 'Profile photo of Gaman Palem',
     imageHint: 'artist portrait',
   },
@@ -37,7 +32,7 @@ const teamMembers: TeamMember[] = [
     id: 'adarsh-chintalapti',
     name: 'Adarsh Chintalapti',
     role: 'Strategic Advisor',
-    image: adarsh,
+    image: '/images/adarsh-chintalapti.jpg',
     imageAlt: 'Profile photo of Adarsh Chintalapti',
     imageHint: 'person portrait',
   },
@@ -45,7 +40,7 @@ const teamMembers: TeamMember[] = [
     id: 'chaitanya-muppala',
     name: 'Chaitanya Muppala',
     role: 'Partnerships Lead',
-    image: chaitanya,
+    image: '/images/chaitanya-muppala.jpg',
     imageAlt: 'Profile photo of Chaitanya Muppala',
     imageHint: 'man professional',
   },
@@ -53,7 +48,7 @@ const teamMembers: TeamMember[] = [
     id: 'yamini-rapeti',
     name: 'Yamini Rapeti',
     role: 'Program Manager',
-    image: yamini,
+    image: '/images/yamini-rapeti.jpg',
     imageAlt: 'Profile photo of Yamini Rapeti',
     imageHint: 'woman professional',
   },

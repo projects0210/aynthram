@@ -1,7 +1,6 @@
 import { CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import { SinceBadge } from '@/components/since-badge';
-import aboutImage from '@/public/images/about-section.jpg';
 
 const uniquePoints = [
   "Art-Led Immersion: Deeply engaging experiences that foster creativity and innovative thinking.",
@@ -39,7 +38,7 @@ export function About() {
           </div>
           <div className="relative h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
             <Image
-                src={aboutImage}
+                src="/images/about-section.jpg"
                 alt="A classical Indian dancer in a powerful and graceful pose, representing heritage and art."
                 data-ai-hint="indian dance heritage"
                 fill

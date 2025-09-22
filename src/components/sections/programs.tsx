@@ -1,4 +1,4 @@
-import Image, { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,9 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import programAcademy from '@/public/images/program-academy.jpg';
-import programEscape from '@/public/images/program-escape.jpg';
-import programCorporate from '@/public/images/program-corporate.jpg';
 
 type Program = {
   id: string;
@@ -24,7 +21,7 @@ type Program = {
   description: string;
   audience: string;
   themes: string[];
-  image: StaticImageData;
+  image: string;
   imageAlt: string;
   imageHint: string;
 }
@@ -36,7 +33,7 @@ const programs: Program[] = [
     description: 'A 3-day immersive program for senior leaders to disconnect from routine and reconnect with their core purpose through art-based interventions.',
     audience: 'Senior Leaders & Executives',
     themes: ['"Quiet Quitting → Quiet Leading"', 'Leading Gen Z'],
-    image: programAcademy,
+    image: '/images/program-academy.jpg',
     imageAlt: "Image for Leadership Academy program",
     imageHint: "leadership workshop"
   },
@@ -46,7 +43,7 @@ const programs: Program[] = [
     description: 'A curated retreat for entrepreneurs to combat burnout, foster creativity, and develop sustainable strategies for their ventures.',
     audience: 'Founders & Entrepreneurs',
     themes: ['Design Thinking for Frugal Innovation'],
-    image: programEscape,
+    image: '/images/program-escape.jpg',
     imageAlt: "Image for Founders' Escape program",
     imageHint: "founder retreat"
   },
@@ -56,7 +53,7 @@ const programs: Program[] = [
     description: "Custom experiential programs and retreats for corporate teams, blending leadership development with the unique cultural heritage of Odisha.",
     audience: 'Corporate Teams',
     themes: ['Team Cohesion', 'Cross-cultural Leadership'],
-    image: programCorporate,
+    image: '/images/program-corporate.jpg',
     imageAlt: "Image for Corporate Retreats program",
     imageHint: "team building"
   },

@@ -4,22 +4,17 @@ import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from "embla-carousel-autoplay"
 import { Card, CardContent } from "@/components/ui/card"
-import Image, { type StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { Quote, ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-
-import testimonial1 from '@/public/images/testimonial-1.jpg';
-import testimonial2 from '@/public/images/testimonial-2.jpg';
-import testimonial3 from '@/public/images/testimonial-3.jpg';
-
 
 type Testimonial = {
     id: string;
     quote: string;
     author: string;
     title: string;
-    image: StaticImageData;
+    image: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -28,21 +23,21 @@ const testimonials: Testimonial[] = [
         quote: "Aynthram's program was a revelation. It connected me to a deeper sense of purpose and gave me practical tools to lead my team with more empathy and creativity. Truly transformative.",
         author: "Priya Sharma",
         title: "CEO, Innovate Inc.",
-        image: testimonial1,
+        image: "/images/testimonial-1.jpg",
     },
     {
         id: "testimonial-2",
         quote: "As a founder, burnout is a real threat. The Founders' Escape was the perfect antidote. I came back recharged, with a new perspective on sustainable leadership and a network of fellow entrepreneurs.",
         author: "Rohan Mehta",
         title: "Founder, Techify Solutions",
-        image: testimonial2,
+        image: "/images/testimonial-2.jpg",
     },
     {
         id: "testimonial-3",
         quote: "The blend of ancient art and modern business challenges is unique and incredibly effective. Our team's communication and collaboration have improved significantly since the retreat.",
         author: "Anjali Gupta",
         title: "HR Director, GlobalCorp",
-        image: testimonial3,
+        image: "/images/testimonial-3.jpg",
     }
 ];
 
