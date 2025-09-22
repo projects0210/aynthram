@@ -68,11 +68,11 @@ export function Hero() {
               </div>
             </div>
           </div>
-          <div className={`mt-8 flex items-center justify-center lg:justify-start gap-x-6 transition-all duration-1000 delay-300 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <Button asChild size="lg" variant="secondary" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <div className={`mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-x-6 gap-y-4 transition-all duration-1000 delay-300 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <Button asChild size="lg" variant="secondary" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto">
               <Link href="#programs">Explore Programs</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-white border-white/50 hover:bg-white/10 hover:text-white">
+            <Button asChild size="lg" variant="outline" className="text-white border-white/50 hover:bg-white/10 hover:text-white w-full sm:w-auto">
               <Link href="#experience">Learn Our Approach</Link>
             </Button>
           </div>
