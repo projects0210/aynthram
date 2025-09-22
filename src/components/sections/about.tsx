@@ -9,7 +9,9 @@ const uniquePoints = [
 
 export function About() {
   return (
-    <section id="about" className="w-full py-20 lg:py-32 bg-background">
+    <section id="about" className="w-full py-20 lg:py-32 bg-background" style={{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='hsl(165, 45%, 19%)' fill-opacity='0.04'%3E%3Crect x='0' y='0' width='50' height='50' /%3E%3Crect x='50' y='50' width='50' height='50' /%3E%3C/g%3E%3C/svg%3E")`
+    }}>
       <div className="container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
