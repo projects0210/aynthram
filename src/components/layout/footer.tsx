@@ -28,8 +28,8 @@ export function Footer() {
       <div className="container py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center space-x-2">
-               <AynthramLogo className="h-8 w-auto text-white" />
+            <Link href="/" className="flex items-center">
+               <AynthramLogo />
             </Link>
             <p className="mt-4 text-base text-primary-foreground/70 text-balance">
               Transforming leadership through immersive experiences that blend ancient wisdom with modern practices.
