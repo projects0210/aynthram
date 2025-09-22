@@ -70,42 +70,44 @@ export function Testimonials() {
         </div>
         
         <div className="relative mt-16">
-          <div className="overflow-hidden embla-testimonials" ref={emblaRef}>
-            <div className="embla__container-testimonials">
-              {testimonials.map((testimonial, index) => {
-                const image = PlaceHolderImages.find(p => p.id === testimonial.id);
-                return (
-                  <div 
-                    key={testimonial.id}
-                    className={cn('embla__slide-testimonials', { 'is-active': index === activeIndex })}
-                  >
-                    <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground h-full">
-                      <CardContent className="flex flex-col items-center justify-center p-8 md:p-12 text-center h-full">
-                        <Quote className="h-10 w-10 text-accent" />
-                        <p className="mt-6 text-xl md:text-2xl font-light text-balance flex-grow">
-                          "{testimonial.quote}"
-                        </p>
-                        <div className="mt-8 flex items-center gap-4">
-                          {image && (
-                            <Image
-                              src={image.imageUrl}
-                              alt={testimonial.author}
-                              data-ai-hint="person face"
-                              width={64}
-                              height={64}
-                              className="rounded-full object-cover"
-                            />
-                          )}
-                          <div>
-                            <p className="font-semibold text-lg">{testimonial.author}</p>
-                            <p className="text-primary-foreground/70">{testimonial.title}</p>
+          <div className="embla-testimonials">
+            <div className="embla__viewport-testimonials" ref={emblaRef}>
+              <div className="embla__container-testimonials">
+                {testimonials.map((testimonial, index) => {
+                  const image = PlaceHolderImages.find(p => p.id === testimonial.id);
+                  return (
+                    <div 
+                      key={testimonial.id}
+                      className={cn('embla__slide-testimonials', { 'is-active': index === activeIndex })}
+                    >
+                      <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground h-full">
+                        <CardContent className="flex flex-col items-center justify-center p-8 md:p-12 text-center h-full">
+                          <Quote className="h-10 w-10 text-accent" />
+                          <p className="mt-6 text-xl md:text-2xl font-light text-balance flex-grow">
+                            "{testimonial.quote}"
+                          </p>
+                          <div className="mt-8 flex items-center gap-4">
+                            {image && (
+                              <Image
+                                src={image.imageUrl}
+                                alt={testimonial.author}
+                                data-ai-hint="person face"
+                                width={64}
+                                height={64}
+                                className="rounded-full object-cover"
+                              />
+                            )}
+                            <div>
+                              <p className="font-semibold text-lg">{testimonial.author}</p>
+                              <p className="text-primary-foreground/70">{testimonial.title}</p>
+                            </div>
                           </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                );
-              })}
+                        </CardContent>
+                      </Card>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
            <div className="absolute top-1/2 -translate-y-1/2 flex items-center justify-between w-full left-0">
