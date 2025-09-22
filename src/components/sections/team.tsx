@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Linkedin } from 'lucide-react';
 
 const teamMembers = [
@@ -8,26 +7,36 @@ const teamMembers = [
     id: 'vasudev-vangara',
     name: 'Vasudev Vangara',
     role: 'Founder & CEO',
+    imageAlt: 'Profile photo of Vasudev Vangara',
+    imageHint: 'man portrait',
   },
   {
     id: 'gaman-palem',
     name: 'Gaman Palem',
     role: 'Artist & Co-Creator',
+    imageAlt: 'Profile photo of Gaman Palem',
+    imageHint: 'artist portrait',
   },
   {
     id: 'adarsh-chintalapti',
     name: 'Adarsh Chintalapti',
     role: 'Strategic Advisor',
+    imageAlt: 'Profile photo of Adarsh Chintalapti',
+    imageHint: 'person portrait',
   },
   {
     id: 'chaitanya-muppala',
     name: 'Chaitanya Muppala',
     role: 'Partnerships Lead',
+    imageAlt: 'Profile photo of Chaitanya Muppala',
+    imageHint: 'man professional',
   },
   {
     id: 'yamini-rapeti',
     name: 'Yamini Rapeti',
     role: 'Program Manager',
+    imageAlt: 'Profile photo of Yamini Rapeti',
+    imageHint: 'woman professional',
   },
 ];
 
@@ -46,19 +55,16 @@ export function Team() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12 mt-16">
           {teamMembers.map((member) => {
-            const image = PlaceHolderImages.find(p => p.id === member.id);
             return (
               <div key={member.name} className="text-center group">
                  <div className="relative aspect-square w-full max-w-[200px] mx-auto">
-                    {image && (
-                      <Image
-                        src={image.imageUrl}
-                        alt={image.description}
-                        data-ai-hint={image.imageHint}
-                        fill
-                        className="object-cover rounded-full shadow-lg transition-all duration-300 group-hover:shadow-2xl"
-                      />
-                    )}
+                    <Image
+                      src={`/images/${member.id}.jpg`}
+                      alt={member.imageAlt}
+                      data-ai-hint={member.imageHint}
+                      fill
+                      className="object-cover rounded-full shadow-lg transition-all duration-300 group-hover:shadow-2xl"
+                    />
                      <div className="absolute inset-0 bg-primary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <div className="p-3 bg-white/70 backdrop-blur-sm rounded-full text-primary">
                             <Linkedin className="h-6 w-6" />

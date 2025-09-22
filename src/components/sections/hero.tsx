@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { SinceBadge } from '@/components/since-badge';
 
 const slidingTexts = [
@@ -17,7 +16,6 @@ const slidingTexts = [
 export function Hero() {
   const [isMounted, setIsMounted] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
   useEffect(() => {
     setIsMounted(true);
@@ -29,16 +27,14 @@ export function Hero() {
 
   return (
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          data-ai-hint={heroImage.imageHint}
+      <Image
+          src="/images/hero-background.jpg"
+          alt="A leader passionately delivering a speech from a podium at a formal event."
+          data-ai-hint="leadership speech"
           fill
           className="object-cover"
           priority
         />
-      )}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-primary/30 lg:bg-gradient-to-r lg:from-primary/90 lg:via-primary/70 lg:to-transparent" />
       <div className="relative z-10 container flex h-full items-center justify-center text-center lg:justify-start lg:text-left pt-20 pb-12 lg:py-0 px-4">
         <div className="max-w-xl text-white">

@@ -1,6 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { SinceBadge } from '@/components/since-badge';
 
 const uniquePoints = [
@@ -10,7 +9,6 @@ const uniquePoints = [
 ];
 
 export function About() {
-  const aboutImage = PlaceHolderImages.find(p => p.id === 'about-section');
   
   return (
     <section id="about" className="w-full py-20 lg:py-32 bg-background">
@@ -39,15 +37,13 @@ export function About() {
               </ul>
           </div>
           <div className="relative h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
-            {aboutImage && (
-                <Image
-                    src={aboutImage.imageUrl}
-                    alt={aboutImage.description}
-                    data-ai-hint={aboutImage.imageHint}
-                    fill
-                    className="object-cover"
-                />
-            )}
+            <Image
+                src="/images/about-section.jpg"
+                alt="A classical Indian dancer in a powerful and graceful pose, representing heritage and art."
+                data-ai-hint="indian dance heritage"
+                fill
+                className="object-cover"
+            />
              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
           </div>
         </div>

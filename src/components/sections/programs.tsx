@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -23,6 +22,8 @@ const programs = [
     description: 'A 3-day immersive program for senior leaders to disconnect from routine and reconnect with their core purpose through art-based interventions.',
     audience: 'Senior Leaders & Executives',
     themes: ['"Quiet Quitting → Quiet Leading"', 'Leading Gen Z'],
+    imageAlt: "Image for Leadership Academy program",
+    imageHint: "leadership workshop"
   },
   {
     id: 'program-escape',
@@ -30,6 +31,8 @@ const programs = [
     description: 'A curated retreat for entrepreneurs to combat burnout, foster creativity, and develop sustainable strategies for their ventures.',
     audience: 'Founders & Entrepreneurs',
     themes: ['Design Thinking for Frugal Innovation'],
+    imageAlt: "Image for Founders' Escape program",
+    imageHint: "founder retreat"
   },
   {
     id: 'program-corporate',
@@ -37,6 +40,8 @@ const programs = [
     description: "Custom experiential programs and retreats for corporate teams, blending leadership development with the unique cultural heritage of Odisha.",
     audience: 'Corporate Teams',
     themes: ['Team Cohesion', 'Cross-cultural Leadership'],
+    imageAlt: "Image for Corporate Retreats program",
+    imageHint: "team building"
   },
 ];
 
@@ -55,20 +60,17 @@ export function Programs() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {programs.map((program) => {
-            const image = PlaceHolderImages.find(p => p.id === program.id);
             return (
               <Card key={program.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                {image && (
-                  <div className="relative h-56 w-full">
-                    <Image
-                      src={image.imageUrl}
-                      alt={image.description}
-                      data-ai-hint={image.imageHint}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                )}
+                <div className="relative h-56 w-full">
+                  <Image
+                    src={`/images/${program.id}.jpg`}
+                    alt={program.imageAlt}
+                    data-ai-hint={program.imageHint}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <CardHeader>
                   <CardTitle className="font-headline text-2xl text-primary">{program.title}</CardTitle>
                   <CardDescription>{program.audience}</CardDescription>

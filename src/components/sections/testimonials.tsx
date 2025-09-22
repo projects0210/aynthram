@@ -4,7 +4,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from "embla-carousel-autoplay"
 import { Card, CardContent } from "@/components/ui/card"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
 import Image from 'next/image'
 import { Quote, ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from '@/lib/utils';
@@ -74,7 +73,6 @@ export function Testimonials() {
             <div className="embla__viewport-testimonials" ref={emblaRef}>
               <div className="embla__container-testimonials">
                 {testimonials.map((testimonial, index) => {
-                  const image = PlaceHolderImages.find(p => p.id === testimonial.id);
                   return (
                     <div 
                       key={testimonial.id}
@@ -87,16 +85,14 @@ export function Testimonials() {
                             "{testimonial.quote}"
                           </p>
                           <div className="mt-8 flex items-center gap-4">
-                            {image && (
                               <Image
-                                src={image.imageUrl}
+                                src={`/images/${testimonial.id}.jpg`}
                                 alt={testimonial.author}
                                 data-ai-hint="person face"
                                 width={64}
                                 height={64}
                                 className="rounded-full object-cover"
                               />
-                            )}
                             <div>
                               <p className="font-semibold text-lg">{testimonial.author}</p>
                               <p className="text-primary-foreground/70">{testimonial.title}</p>
