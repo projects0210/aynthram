@@ -100,22 +100,15 @@ export function Contact() {
             </form>
           </CardContent>
         </Card>
-        <div className="space-y-8">
-            <div className="space-y-4">
-                <h3 className="font-headline text-2xl font-bold text-primary">Connect with Our Founder</h3>
-                <div className="space-y-2 text-lg text-foreground/80">
-                    <p className="font-semibold text-primary">Vasudev Vangara</p>
-                    <p className="text-base -mt-2">Founder & CEO</p>
-                    <p><a href="mailto:vasudev.aynthram@gmail.com" className="hover:underline">vasudev.aynthram@gmail.com</a></p>
-                    <p><a href="tel:+919703831819" className="hover:underline">+91 9703831819</a></p>
-                </div>
-            </div>
+        <div className="space-y-8 pt-8">
              <Card className="bg-primary/5 border-primary/20">
                 <CardHeader>
                     <CardTitle className="font-headline text-2xl text-primary">Transform Your Organization</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p className="text-foreground/80">From individual leadership growth to organization-wide cultural transformation, discover how Aynthram can help you build leaders who don't just stay relevant but redefine the game.</p>
+                     <p className="mt-4 text-foreground/80"><strong>Email:</strong> <a href="mailto:vasudev.aynthram@gmail.com" className="hover:underline">vasudev.aynthram@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+919703831819" className="hover:underline">+91 9703831819</a></p>
                 </CardContent>
              </Card>
         </div>
