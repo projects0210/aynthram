@@ -11,6 +11,7 @@ import { Partners } from "@/components/sections/partners";
 import { Contact } from "@/components/sections/contact";
 import { Testimonials } from "@/components/sections/testimonials";
 import { TaglineBanner } from "@/components/sections/tagline-banner";
+import { ScrollToTop } from "@/components/layout/scroll-to-top";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <TaglineBanner />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
