@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A lone figure looking out over a vast, misty mountain range at sunrise, symbolizing vision, strategy, and the leadership journey ahead.",
-      "imageUrl": "https://picsum.photos/seed/leadership-vista/1920/1080",
-      "imageHint": "leadership vision"
+      "description": "An old, strong tree with deep roots, symbolizing stability, growth, and legacy in a serene, professional setting.",
+      "imageUrl": "https://picsum.photos/seed/legacy-tree/1920/1080",
+      "imageHint": "leadership legacy"
     },
     {
       "id": "about-section",
