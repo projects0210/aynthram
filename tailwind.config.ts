@@ -22,7 +22,7 @@ export default {
         code: ['monospace'],
       },
       colors: {
-        mustard: '#E6AA3C',
+        mustard: 'hsl(var(--accent))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
