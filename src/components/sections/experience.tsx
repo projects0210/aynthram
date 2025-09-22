@@ -42,44 +42,28 @@ export function Experience() {
           </p>
         </div>
 
-        <div className="relative mt-20 max-w-4xl mx-auto">
+        <div className="relative mt-20 max-w-5xl mx-auto">
           {/* Central Line */}
           <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border" />
 
           {experienceSteps.map((step, index) => (
-            <div key={index} className="relative mb-12">
-              <div className="flex items-center">
-                {/* Content */}
-                <div
-                  className={`w-1/2 ${
-                    index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'
-                  }`}
-                >
-                  <div
-                    className={`inline-block ${
-                      index % 2 === 0 ? 'order-1' : 'order-3'
-                    }`}
-                  >
+             <div key={index} className="relative mb-16 flex justify-center items-center">
+                {/* Left Side */}
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'order-2 pl-8 text-left'}`}>
                     <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
                     <p className="mt-2 text-foreground/80">{step.description}</p>
-                  </div>
+                </div>
+                
+                {/* Icon in the middle */}
+                <div className="w-auto absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 bg-background px-2">
+                    <div className="bg-accent/10 p-4 rounded-full border-2 border-accent/20">
+                    <step.icon className="h-8 w-8 text-accent" />
+                    </div>
                 </div>
 
-                {/* Spacer to push content to the other side */}
-                <div
-                  className={`w-1/2 ${
-                    index % 2 === 0 ? 'order-3' : 'order-1'
-                  }`}
-                />
-              </div>
-
-              {/* Icon in the middle */}
-              <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 bg-background">
-                <div className="bg-accent/10 p-4 rounded-full border-2 border-accent/20">
-                  <step.icon className="h-8 w-8 text-accent" />
-                </div>
-              </div>
-            </div>
+                {/* Right side (spacer) */}
+                <div className={`w-1/2 ${index % 2 === 0 ? '' : 'order-1'}`} />
+             </div>
           ))}
         </div>
       </div>
