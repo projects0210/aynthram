@@ -47,22 +47,20 @@ export function Experience() {
           <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border" />
 
           {experienceSteps.map((step, index) => (
-             <div key={index} className="relative mb-16 flex justify-center items-center">
-                {/* Left Side */}
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'order-2 pl-8 text-left'}`}>
+             <div key={index} className="relative mb-16 flex justify-between items-center w-full">
+                <div className={`w-1/2 ${index % 2 === 0 ? 'order-1 pr-12 text-right' : 'order-2 pl-12 text-left'}`}>
                     <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
                     <p className="mt-2 text-foreground/80">{step.description}</p>
                 </div>
                 
+                <div className={`w-1/2 ${index % 2 === 0 ? 'order-2' : 'order-1'}`} />
+
                 {/* Icon in the middle */}
-                <div className="w-auto absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 bg-background px-2">
+                <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 bg-background px-2">
                     <div className="bg-accent/10 p-4 rounded-full border-2 border-accent/20">
-                    <step.icon className="h-8 w-8 text-accent" />
+                      <step.icon className="h-8 w-8 text-accent" />
                     </div>
                 </div>
-
-                {/* Right side (spacer) */}
-                <div className={`w-1/2 ${index % 2 === 0 ? '' : 'order-1'}`} />
              </div>
           ))}
         </div>
