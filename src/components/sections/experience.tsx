@@ -47,8 +47,8 @@ export function Experience() {
           <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border" />
 
           {experienceSteps.map((step, index) => (
-             <div key={index} className="relative mb-16 flex justify-between items-center w-full">
-                <div className={`w-1/2 ${index % 2 === 0 ? 'order-1 pr-12 text-right' : 'order-2 pl-12 text-left'}`}>
+             <div key={index} className={`relative flex justify-between items-center w-full ${index === experienceSteps.length - 1 ? 'mb-0' : 'mb-16'}`}>
+                <div className={`w-1/2 ${index % 2 === 0 ? 'order-1 pr-24 text-right' : 'order-2 pl-24 text-left'}`}>
                     <h3 className="font-headline text-2xl font-semibold text-primary">{step.title}</h3>
                     <p className="mt-2 text-foreground/80">{step.description}</p>
                 </div>
