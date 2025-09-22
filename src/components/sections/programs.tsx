@@ -5,6 +5,16 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 const programs = [
   {
@@ -72,11 +82,27 @@ export function Programs() {
                   </div>
                 </CardContent>
                 <CardFooter className="bg-muted/40 py-4">
-                  <Button variant="link" asChild className="p-0 text-primary font-bold group">
-                    <Link href="#contact">
-                      Book This Program <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button variant="link" className="p-0 text-primary font-bold group">
+                        Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle className="font-headline text-2xl text-primary">Transformation starts here.</AlertDialogTitle>
+                        <AlertDialogDescription className="text-lg text-foreground/80">
+                           Ready to begin? Contact us to learn more and book your experience.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <Button variant="ghost">Cancel</Button>
+                        <AlertDialogAction asChild>
+                          <Link href="#contact">Contact Us</Link>
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </CardFooter>
               </Card>
             );
