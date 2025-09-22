@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -41,13 +40,15 @@ export function ScrollToTop() {
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     window.addEventListener('scroll', calculateScrollProgress);
+    toggleVisibility();
+    calculateScrollProgress();
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
       window.removeEventListener('scroll', calculateScrollProgress);
     };
   }, []);
 
-  const circumference = 2 * Math.PI * 28; // 2 * pi * radius
+  const circumference = 2 * Math.PI * 26; // 2 * pi * radius
   const strokeDashoffset = circumference - (progress / 100) * circumference;
 
   return (
@@ -55,7 +56,7 @@ export function ScrollToTop() {
       <Button
         onClick={scrollToTop}
         className={cn(
-          'h-16 w-16 rounded-full p-0 shadow-lg transition-opacity duration-300 relative bg-muted/80 hover:bg-muted',
+          'h-16 w-16 rounded-full p-0 shadow-lg transition-opacity duration-300 relative bg-primary hover:bg-primary/90',
           isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
         aria-label="Scroll to top"
@@ -66,12 +67,13 @@ export function ScrollToTop() {
           viewBox="0 0 64 64"
           className="transform -rotate-90"
         >
+          {/* Progress Ring */}
           <circle
             cx="32"
             cy="32"
             r="28"
             stroke="hsl(var(--accent))"
-            strokeWidth="4"
+            strokeWidth="6"
             fill="transparent"
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
@@ -79,7 +81,21 @@ export function ScrollToTop() {
             className="transition-[stroke-dashoffset] duration-100"
           />
         </svg>
-        <ArrowUp className="absolute h-8 w-8 text-primary" />
+        <div className="absolute inset-0 flex items-center justify-center">
+            <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="hsl(var(--primary-foreground))"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-chevron-up"
+            >
+                <path d="m18 15-6-6-6 6" />
+            </svg>
+        </div>
       </Button>
     </div>
   );
