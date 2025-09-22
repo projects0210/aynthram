@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A person standing on a mountain peak, looking out at the vista, symbolizing leadership and vision.",
-      "imageUrl": "https://images.unsplash.com/photo-1521401410292-386b86a8eda0?q=80&w=1920&h=1080&auto=format&fit=crop",
-      "imageHint": "leadership vision summit"
+      "description": "A leader passionately delivering a speech from a podium at a formal event.",
+      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1920&h=1080&auto=format&fit=crop",
+      "imageHint": "leadership speech"
     },
     {
       "id": "about-section",
